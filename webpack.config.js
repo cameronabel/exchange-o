@@ -22,7 +22,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'exchange-o',
       template: './src/index.html',
-      inject: 'body'
+      inject: 'body',
+      favicon: './src/assets/images/icon.png'
     }),
     new Dotenv()
   ],

@@ -13,3 +13,8 @@ body {
   color: #EEEEEE;
   background-color: #121212;
 }
+
+h1 {
+  text-align: center;
+  padding: 30px;
+}
