@@ -49,8 +49,12 @@ function updateValueHandler() {
     sessionStorage.status = 'pending';
     getRateData();
   } else if (sessionStorage.status === 'loaded'){
+    document.getElementById('error-zone').innerText = null;
     const rateData = JSON.parse(sessionStorage.rateData);
     const currencyCode = document.getElementById('currencies').value || 'USD';
+    if (!rateData.conversion_rates[currencyCode]){
+      document.getElementById('error-zone').innerText = `Currency code ${currencyCode} not found. Try another denomination.`;
+    }
     if (document.activeElement.id === 'usd-input') {
       outputField.value = (document.activeElement.value * parseFloat(rateData.conversion_rates[currencyCode])).toFixed(2);
     } else {
@@ -65,7 +69,7 @@ function updateCurrencies(codes) {
     if (code !== 'USD') {
       const option = document.createElement('option');
       option.value = code;
-      option.innerText = `${code} - ${name}`
+      option.innerText = `${code} - ${name}`;
       document.getElementById('currencies').append(option);
     }
   });
@@ -77,5 +81,4 @@ document.getElementById('currencies').addEventListener("click", getCurrencyData)
 document.getElementById('currencies').addEventListener("change", function () {
   document.getElementById('usd-input').focus();
   updateValueHandler();
-  document.activeElement.blur();
 });

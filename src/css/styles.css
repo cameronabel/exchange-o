@@ -82,6 +82,7 @@ figure {
   min-width: 800px;
   padding: 40px;
   display: flex;
+  margin-bottom: 24px;
 }
 
 .column {

@@ -25,6 +25,6 @@ export default class ExchangeRateService {
       })
       .catch(function(error) {
         return error;
-      })
+      });
   }
 }
