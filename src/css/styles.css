@@ -125,3 +125,7 @@ figure {
   width: 120px;
   top: 20px;
 }
+
+#error-zone {
+  text-align: center;
+}

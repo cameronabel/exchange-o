@@ -25,20 +25,21 @@
         <select id="usd-only" class="currency-selector">
           <option>USD - US Dollar</option>
         </select>
-        <input id="usd-input" class="currency-input">
+        <input id="usd-input" onfocus="this.select()" class="currency-input" type="number" min="0" step="0.01" value="0">
       </div>
       <div class="rate-center column">
         <img id="arrows" src="./assets/images/arrows.png">
       </div>
       <div class="right half column">
         <select id="currencies" class="currency-selector">
-          <option>USD - US Dollar</option>
-  
+          <option value="USD">USD - US Dollar</option>
         </select>
-        <input id="other-input" class="currency-input">
+        <input id="other-input" onclick="this.select()" class="currency-input" type="number" min="0" step="0.01" value="0">
       </div>
-
-    </div>
+    </div> <!-- end rate-box -->
   </div> <!-- end page -->
+  <div id="error-zone">
+
+  </div>
 </body>
 </html>
