@@ -36,7 +36,9 @@ Once active, enter an amount in USD, then select a currency from the dropdown me
 
 ## Known Bugs
 
-- None at this time. Report bugs [here](mailto:cameronabel@gmail.com)
+- Favicon displays poorly in light mode.
+
+Report bugs [here](mailto:cameronabel@gmail.com)
 
 ## License
 
