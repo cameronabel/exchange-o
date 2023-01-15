@@ -30,6 +30,7 @@ nav {
 #nav-logo{
   width: 10em;
   padding: .3em;
+  padding-left: 0;
 }
 
 #gh-logo{
@@ -46,7 +47,8 @@ nav {
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
   padding: .5em;
-  padding-right: 1.5em;
+  padding-left: 1.5em;
+  padding-right: 0;
   color: white;
   font-size: 1rem;
 }
@@ -78,5 +80,48 @@ figure {
   background-color: #1E1E1E;
   box-shadow: 5px 5px 5px black;
   min-width: 800px;
+  padding: 40px;
+  display: flex;
 }
 
+.column {
+  display: inline;
+}
+
+.half {
+  width: 300px;
+}
+
+.rate-center {
+  width: 120px;
+}
+
+.right {
+  justify-content: right;
+  text-align: right;
+}
+
+.currency-selector {
+  display: inline-block;
+  width: 280px;
+  height: 40px;
+  margin-bottom: 15px;
+  box-shadow: 3px 3px 3px black;
+}
+
+.currency-input {
+  display: inline-block;
+  width: 280px;
+  height: 40px;
+  box-shadow: 3px 3px 3px black;
+}
+
+.rate-center {
+  display: flex;
+  align-items: center;
+}
+
+#arrows {
+  width: 120px;
+  top: 20px;
+}
